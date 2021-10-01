@@ -109,6 +109,8 @@ Quite an easy problem. We need to search for maximal k satisfying k^2 <= x, so w
 
 ~~~
 def mySqrt(x: int) -> int:
+    if x * x == x:
+        return x
     left, right = 0, x
     while left < right:
         mid = left + (right - left) // 2
